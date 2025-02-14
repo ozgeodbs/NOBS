@@ -1,0 +1,18 @@
+﻿@model NOBS.Models.UserModel
+
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h2>Sign Up</h2>
+<form method="post">
+    <input asp-for="PhoneNumber" placeholder="Phone Number" required />
+    <input asp-for="Email" placeholder="E-Mail" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <label>
+        <input asp-for="IsAgreed" type="checkbox" required />
+        I agree to the Terms and Conditions.
+    </label>
+    <button type="submit">Sign Up</button>
+</form>
+<a href="@Url.Action("Login", "Account")">Already have an account? Log In</a>
